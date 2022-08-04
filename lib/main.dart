@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok/screens/home.dart';
+import 'package:cover/screens/home.dart';
 
 void main() => runApp(MyApp());
 

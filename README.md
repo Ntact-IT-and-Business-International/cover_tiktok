@@ -1,6 +1,6 @@
-# Flutter Tiktok Ui with tiktok unofficial Api
+# Flutter Cover Ui with cover unofficial Api
 
-tiktok ui remake with unofficial tiktok web api using flutter  
+cover ui remake with unofficial cover web api using flutter  
  
  # Give the repo ⭐️ for the support :) 
 
@@ -16,4 +16,4 @@ tiktok ui remake with unofficial tiktok web api using flutter
 
 ## Visitors Count
 
-<img align="left" src = "https://profile-counter.glitch.me/Flutter-Tiktok-UI-API-Clone/count.svg" alt ="Loading">
+<img align="left" src = "https://profile-counter.glitch.me/Flutter-Cover-UI-API-Clone/count.svg" alt ="Loading">

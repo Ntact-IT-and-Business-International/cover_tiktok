@@ -2,12 +2,12 @@ import 'package:http/http.dart' as http;
 
 class RequestController {
   String url =
-      "https://m.tiktok.com/share/item/list?secUid=&id=&type=5&count=30&minCursor=0&maxCursor=0&shareUid=&lang=en&_signature=pKb.ogAgEB9ImoSQahoqJKSm.rAAPox";
+      "https://m.cover.com/share/item/list?secUid=&id=&type=5&count=30&minCursor=0&maxCursor=0&shareUid=&lang=en&_signature=pKb.ogAgEB9ImoSQahoqJKSm.rAAPox";
 
   Future<String> getCookie() async {
     try {
       var response =
-          await http.get(Uri.parse("https://m.tiktok.com/share/item/"));
+          await http.get(Uri.parse("https://m.cover.com/share/item/"));
       return response.headers["set-cookie"]!;
     } catch (e) {
       return "error";
@@ -25,10 +25,10 @@ class RequestController {
     "Sec-Fetch-Dest": "empty",
     "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64 AppleWebKit/537.36 (KHTML: like Gecko Chrome/80.0.3987.149 Safari/537.36",
-    "Origin": "https://www.tiktok.com",
+    "Origin": "https://www.cover.com",
     "Sec-Fetch-Site": "same-site",
     "Sec-Fetch-Mode": "cors",
-    "Referer": "https://www.tiktok.com/trending/?lang",
+    "Referer": "https://www.cover.com/trending/?lang",
     "Accept-Language": "en-GB:en-US;q",
   };
 

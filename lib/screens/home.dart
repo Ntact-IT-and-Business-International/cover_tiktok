@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok/screens/trending.dart';
+import 'package:cover/screens/trending.dart';
 
 class HomePage extends StatefulWidget {
   @override

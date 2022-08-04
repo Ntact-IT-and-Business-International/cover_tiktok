@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:tiktok/models/tiktok.dart';
-import 'package:tiktok/config/api.dart';
+import 'package:cover/models/cover.dart';
+import 'package:cover/config/api.dart';
 import 'package:http/http.dart' as http;
-import 'package:tiktok/screens/tiktokvideo.dart';
+import 'package:cover/screens/covervideo.dart';
 
 class Trending extends StatefulWidget {
   @override
@@ -24,8 +24,8 @@ class _TrendingState extends State<Trending> {
         Uri.parse(api.url),
         headers: api.headers,
       );
-      Tiktok tiktok = Tiktok.fromJson(jsonDecode(response.body));
-      tiktok.body!.itemListData!.forEach(
+      Cover cover = Cover.fromJson(jsonDecode(response.body));
+      cover.body!.itemListData!.forEach(
         (item) {
           setState(() {
             tikTokVideos.add(TikTokVideo(data: item));
