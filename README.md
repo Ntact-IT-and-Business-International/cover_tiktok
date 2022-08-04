@@ -1,6 +1,6 @@
-# Flutter Cover Ui with cover unofficial Api
+# Cover Ui with cover unofficial Api
 
-cover ui remake with unofficial cover web api using flutter  
+Cover application 
  
  # Give the repo ⭐️ for the support :) 
 
