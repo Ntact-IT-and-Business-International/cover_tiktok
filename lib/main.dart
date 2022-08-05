@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok/screens/home.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Cover());
 
-class MyApp extends StatelessWidget {
+class Cover extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

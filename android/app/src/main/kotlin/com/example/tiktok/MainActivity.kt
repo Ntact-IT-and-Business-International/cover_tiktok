@@ -1,4 +1,4 @@
-package com.example.tiktok
+package com.example.cover
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

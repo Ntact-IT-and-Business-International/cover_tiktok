@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok/models/tiktok.dart';
+import 'package:tiktok/models/cover.dart';
 import 'package:tiktok/widget/leftItems.dart';
 import 'package:tiktok/widget/rightItems.dart';
 import 'package:tiktok/widget/videoPlayer.dart';
@@ -14,7 +14,7 @@ class TikTokVideo extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          TikTokVideoPlayer(url: data.itemInfos!.video!.urls![0]),
+          CoverVideoPlayer(url: data.itemInfos!.video!.urls![0]),
           title(),
           RightItems(
             comments: data.itemInfos!.commentCount.toString(),

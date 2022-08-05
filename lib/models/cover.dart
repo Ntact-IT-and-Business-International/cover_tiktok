@@ -1,11 +1,11 @@
-class Tiktok {
+class Cover {
   int? statusCode;
   Body? body;
   dynamic errMsg;
 
-  Tiktok({this.statusCode, this.body, this.errMsg});
+  Cover({this.statusCode, this.body, this.errMsg});
 
-  Tiktok.fromJson(Map<String, dynamic> json) {
+  Cover.fromJson(Map<String, dynamic> json) {
     statusCode = json['statusCode'];
     body = json['body'] != null ? new Body.fromJson(json['body']) : null;
     errMsg = json['errMsg'];
