@@ -1,3 +1,4 @@
+import 'package:cover/shared/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:cover/screens/home.dart';
 
@@ -12,7 +13,7 @@ class Cover extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: BottomNav(),
     );
   }
 }
