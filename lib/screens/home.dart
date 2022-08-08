@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok/screens/trending.dart';
+import 'package:cover/screens/trending.dart';
+import 'package:cover/components/video/my_videos.dart';
+import 'package:cover/components/profile.dart/user_profile.dart';
+import '../components/video/record_video.dart';
+import 'package:cover/components/favorite/favorite.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,6 +22,10 @@ class _HomePageState extends State<HomePage> {
         controller: pageController,
         children: <Widget>[
           Trending(),
+          MyVideos(),
+          RecordVideo(),
+          FavoriteMusic(),
+          UserProfile(),
         ],
         onPageChanged: (int index) {
           setState(
@@ -49,15 +57,15 @@ class _HomePageState extends State<HomePage> {
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          label: "",
+          label: "home",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.search),
-          label: "",
+          label: "search",
         ),
         BottomNavigationBarItem(
           icon: tikTokLog(),
-          label: "",
+          label: "add",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.indeterminate_check_box),
@@ -65,7 +73,7 @@ class _HomePageState extends State<HomePage> {
         ),
         BottomNavigationBarItem(
           icon: Icon(FontAwesomeIcons.userAlt),
-          label: "",
+          label: "profile",
         ),
       ],
     );

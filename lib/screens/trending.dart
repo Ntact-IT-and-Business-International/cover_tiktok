@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:tiktok/models/cover.dart';
-import 'package:tiktok/config/api.dart';
+import 'package:cover/models/cover.dart';
+import 'package:cover/config/api.dart';
 import 'package:http/http.dart' as http;
-import 'package:tiktok/screens/covervideo.dart';
+import 'package:cover/screens/covervideo.dart';
 
 class Trending extends StatefulWidget {
   @override
