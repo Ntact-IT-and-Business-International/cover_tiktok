@@ -1,82 +1,68 @@
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import '../video/play_video.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
-class RecordVideo extends StatefulWidget {
-  const RecordVideo({Key? key}) : super(key: key);
+import '../../widgets/card_textfield.dart';
+import '../../widgets/uploadingscreen.dart';
 
+class AddFile extends StatefulWidget {
+  const AddFile({Key? key}) : super(key: key);
   @override
-  _RecordVideoState createState() => _RecordVideoState();
+  _AddFileState createState() => _AddFileState();
 }
 
-class _RecordVideoState extends State<RecordVideo> {
-  bool _isLoading = true;
-  bool _isRecording = false;
-  late CameraController _cameraController;
-
-  @override
-  void initState() {
-    _initCamera();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _cameraController.dispose();
-    super.dispose();
-  }
-
-  _initCamera() async {
-    final cameras = await availableCameras();
-    final front = cameras.firstWhere(
-        (camera) => camera.lensDirection == CameraLensDirection.front);
-    _cameraController = CameraController(front, ResolutionPreset.max);
-    await _cameraController.initialize();
-    setState(() => _isLoading = false);
-  }
-
-  _recordVideo() async {
-    if (_isRecording) {
-      final file = await _cameraController.stopVideoRecording();
-      setState(() => _isRecording = false);
-      final route = MaterialPageRoute(
-        fullscreenDialog: true,
-        builder: (_) => VideoPage(filePath: file.path),
-      );
-      Navigator.push(context, route);
-    } else {
-      await _cameraController.prepareForVideoRecording();
-      await _cameraController.startVideoRecording();
-      setState(() => _isRecording = true);
-    }
-  }
+class _AddFileState extends State<AddFile> {
+  List<String> labels = ["Phone", "Video", "Audio", "Document"];
+  int currentIndex = 0;
+  String tit = 'Upload File';
+  String sub = 'Browse and chose the files you want to upload.';
 
   @override
   Widget build(BuildContext context) {
-    if (_isLoading) {
-      return Container(
-        color: Colors.white,
-        child: const Center(
-          child: CircularProgressIndicator(),
+    return Scaffold(
+        backgroundColor: Colors.white,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => UploadScreen(1, '1', tit, sub)));
+          },
+          backgroundColor: Colors.blue,
+          child: Icon(
+            Icons.arrow_forward,
+            color: Colors.white,
+          ),
         ),
-      );
-    } else {
-      return Center(
-        child: Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            CameraPreview(_cameraController),
-            Padding(
-              padding: const EdgeInsets.all(25),
-              child: FloatingActionButton(
-                backgroundColor: Colors.red,
-                child: Icon(_isRecording ? Icons.stop : Icons.circle),
-                onPressed: () => _recordVideo(),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
+        body: ListView(children: <Widget>[
+          Container(
+              height: MediaQuery.of(context).size.height - 185.0,
+              child: ListView(
+                  primary: false,
+                  padding: EdgeInsets.all(0.0),
+                  children: <Widget>[
+                    Padding(
+                        padding: EdgeInsets.only(top: 45.0),
+                        child: Container(
+                            height: MediaQuery.of(context).size.height - 300.0,
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: GridView.count(
+                                      crossAxisCount: 2,
+                                      scrollDirection: Axis.vertical,
+                                      // padding: EdgeInsets.all(25),
+                                      children: <Widget>[
+                                        const MyCard(
+                                            Colors.blue, 'Upload Audio'),
+                                        const MyCard(
+                                            Colors.blue, 'Upload Video'),
+                                      ],
+                                    ),
+                                  )
+                                ]))),
+                  ])),
+        ]));
   }
 }

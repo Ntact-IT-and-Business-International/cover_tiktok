@@ -25,7 +25,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     MyRecordings(),
     MyVideos(),
-    RecordVideo(),
+    AddFile(),
     FavoriteMusic(),
     UserProfile(),
   ];

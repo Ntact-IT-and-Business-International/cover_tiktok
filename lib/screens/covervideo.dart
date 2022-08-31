@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cover/models/cover.dart';
-import 'package:cover/widget/leftItems.dart';
-import 'package:cover/widget/rightItems.dart';
-import 'package:cover/widget/videoPlayer.dart';
+import 'package:cover/widgets/leftItems.dart';
+import 'package:cover/widgets/rightItems.dart';
+import 'package:cover/widgets/videoPlayer.dart';
 
 class TikTokVideo extends StatelessWidget {
   final ItemListData data;

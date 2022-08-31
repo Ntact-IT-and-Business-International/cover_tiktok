@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Trending(),
           MyVideos(),
-          RecordVideo(),
+          AddFile(),
           FavoriteMusic(),
           UserProfile(),
         ],

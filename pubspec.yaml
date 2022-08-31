@@ -32,6 +32,10 @@ dependencies:
   cupertino_icons: ^1.0.4
   camera: ^0.10.0
   just_audio: ^0.9.28
+  flutter_audio_query: ^0.3.4+1
+  audio_manager: ^0.8.2
+  toggle_switch: ^2.0.1
+  flutter_staggered_grid_view: ^0.6.2
 
 dev_dependencies:
   flutter_test:
