@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:cover/screens/trending.dart';
 import 'package:cover/components/video/my_videos.dart';
 import 'package:cover/components/profile.dart/user_profile.dart';
-import '../components/video/record_video.dart';
+import '../components/video/upload_file.dart';
 import 'package:cover/components/favorite/favorite.dart';
 
 class HomePage extends StatefulWidget {

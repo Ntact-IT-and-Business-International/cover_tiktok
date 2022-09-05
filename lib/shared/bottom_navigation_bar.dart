@@ -3,7 +3,7 @@ import 'package:cover/components/audio/my_recordings.dart';
 import 'package:cover/components/video/my_videos.dart';
 import 'package:cover/components/profile.dart/user_profile.dart';
 import 'package:flutter/material.dart';
-import '../components/video/record_video.dart';
+import '../components/video/upload_file.dart';
 
 class BottomNav extends StatelessWidget {
   const BottomNav({Key? key}) : super(key: key);

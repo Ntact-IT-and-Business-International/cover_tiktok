@@ -10,7 +10,6 @@ class MyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: backgroundColor,
-      elevation: 5,
       margin: EdgeInsets.all(10),
       child: new InkWell(
           onTap: () {},
@@ -44,23 +43,3 @@ class MyCard extends StatelessWidget {
     );
   }
 }
-
-final email = TextField(
-  autofocus: false,
-  style: TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
-  decoration: InputDecoration(
-    filled: true,
-    suffixIcon: Icon(Icons.search),
-    fillColor: Colors.white,
-    hintText: 'Search the file by name or type.',
-    contentPadding: const EdgeInsets.all(15),
-    focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
-      borderRadius: BorderRadius.circular(25.7),
-    ),
-    enabledBorder: UnderlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
-      borderRadius: BorderRadius.circular(25.7),
-    ),
-  ),
-);
